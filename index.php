@@ -2,6 +2,7 @@
 @Session_start(); //Session oluşturmamız şart.
 //Eğer .cssler için ayrı .jsler için ayrı php dosyanız varsa XX_CACHE_KORUMA_SANIYE olarak değiştirin.
 define('CACHE_KORUMA_SANIYE', 3); //Kaç saniyede bir koruma haline almasını istediğinizi yazın.
+if(!isset($_SESSION['CacheKorumasi'])) { $_SESSION['CacheKorumasi'] = time(); } //Eğer CacheKorumasi adlı session başlamadıysa onu ilk açılışta başlatmamız gerkeiyor. Aksi takdirde görüntülerde kayma, geç açılma gibi sorunlar olabilir.
 
 ?>
 <!-- Örnek Kullanım -->
